@@ -40,7 +40,7 @@ prepare() {
 
 #=========================================
 build() {
-   cd "$srcdir/${pkgname}-${pkgver}"
+   cd "$srcdir/${pkgname}"
 
    perl Makefile.PL PREFIX=/usr SYSCONFDIR=/etc/glpi-agent LOCALSTATEDIR=/var/lib/glpi-agent
    make
@@ -48,14 +48,14 @@ build() {
 
 #=========================================
 check() {
-   cd "$srcdir/${pkgname}-${pkgver}"
+   cd "$srcdir/${pkgname}"
 
    #make test
 }
 
 #=========================================
 package() {
-   cd "$srcdir/${pkgname}-${pkgver}"
+   cd "$srcdir/${pkgname}"
 
    make DESTDIR="$pkgdir" install
    install -d "${pkgdir}/var/lib/glpi-agent"
