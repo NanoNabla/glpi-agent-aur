@@ -64,6 +64,6 @@ package() {
    install -Dm644 contrib/unix/glpi-agent.service "${pkgdir}/usr/lib/systemd/system/glpi-agent.service"
    install -d "${pkgdir}/usr/share/licenses/${pkgname}"
    install -Dm644 {LICENSE,README.*,THANKS} "${pkgdir}/usr/share/licenses/${pkgname}/"
-   install -Dm644 "contrib/unix/filtered_packs.txt" "${pkgdir}/etc/glpi-agent
+   install -Dm644 "contrib/unix/filtered_packs.txt" "${pkgdir}/etc/glpi-agent"
 }
 
